@@ -1,0 +1,137 @@
+<style>
+  .background{
+    background-color: #333333;
+    background-position: top;
+    padding-top: 36px;
+    padding-bottom: 0px;
+    }
+
+  .heading {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 12px;
+  }
+
+  .cards {
+    background-color: #1a1a1a;
+    background-position: top;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .card {
+    width: 100%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    display: flex;
+  }
+
+  .card-media {
+    width: 60%
+  }
+
+  .card-text {
+    width: 40%;
+  }
+
+  .card-text.right {
+    padding-left: 24px;
+  }
+
+  .card-text.left {
+    padding-right: 24px;
+  }
+
+  .card-heading {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 0px;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    color: #cccccc
+  }
+
+  .media {
+    border-radius: 5px;
+    width: 100%;
+    height: auto
+  }
+  
+  p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+</style>
+
+<div class="main-content">
+  <div class="background">
+    <h1 class="heading">Tired of 50 hour render times for nature scenes?</h1>
+
+    <!-- Feature Cards -->
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-media">
+          <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/PeskyGoldenCavy-mobile.mp4">
+          </div>
+        <div class="card-text right">
+          <p class="card-heading">3D tree models are slow</p>
+          <p class="card-body">
+            Traditional tree models often have millions of polygons, and
+            multiple complex materials, making them very slow to render.
+          They also slow down the viewport and add to visual noise while working.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      
+      <div class="card">
+        <div class="card-text left">
+          <p class="card-heading">They also use a lot of memory</p>
+          <p class="card-body">
+            Another problem with having all of those polygons and textures
+            is that they can add up and overload the memory limits of your GPU,
+            resulting in having to render on the CPU, often 5 to 10x slower.
+          </p>
+        </div>
+        <div class="card-media">
+            <img class="media" src="https://i.ibb.co/6rc4PZS/CUDA-error.jpg">
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADING -->
+    <div class="heading" style="font-size: 40px">
+      Use Alpha Trees to render 10x the no. of trees 10x as fast
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-media">
+          <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/PeskyGoldenCavy-mobile.mp4">
+          </div>
+        <div class="card-text right">
+          <p class="card-heading">Billboards are a lot faster</p>
+          <p class="card-body">
+            Alpha Trees uses flat tree cards to speed up rendering and lower memory usage.
+            Each tree card only has 4 vertices
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
