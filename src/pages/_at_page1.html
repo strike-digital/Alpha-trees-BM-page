@@ -1,10 +1,10 @@
 <style>
-  .background{
+  .background {
     background-color: #333333;
     background-position: top;
     padding-top: 36px;
     padding-bottom: 0px;
-    }
+  }
 
   .heading {
     color: #ffffff;
@@ -14,11 +14,14 @@
     text-align: center;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin-bottom: 12px;
+    text-shadow: 7px 7px 15px rgb(32, 32, 32);
   }
 
   .cards {
-    background-color: #1a1a1a;
+    background-color: #252525;
     background-position: top;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -30,15 +33,18 @@
     width: 100%;
     padding-top: 36px;
     padding-bottom: 36px;
-    display: flex;
+    /* display: flex; */
+    display:flex;
+    background-color: #252525;
   }
 
   .card-media {
-    width: 60%
+    width: 55%;
   }
 
   .card-text {
-    width: 40%;
+    width: 45%;
+    /* font-size: 14px; */
   }
 
   .card-text.right {
@@ -52,86 +58,397 @@
   .card-heading {
     color: #ffffff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 0px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.75rem;
   }
 
   .card-body {
-    color: #cccccc
+    color: #cccccc;
   }
 
   .media {
     border-radius: 5px;
     width: 100%;
-    height: auto
+    height: auto;
+    box-shadow: 10px 10px 20px #000000;
   }
-  
+
   p {
     margin-bottom: 0px;
     margin-top: 0px;
+  }
+
+  /* table{ */
+  /* border-radius: 10px; */
+  /* border-collapse: collapse; */
+  /* color: #ffffff; */
+  /* border: 1px solid; */
+  /* } */
+
+  table {
+    border-collapse: separate;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 10px 10px 20px rgb(26, 26, 26);
+    border: solid white 1px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  td,
+  th {
+    border-left: solid white 1px;
+    border-top: solid white 1px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+  td.rightheading {
+    text-align: left;
+  }
+  
+  th {
+    border-top: none;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  td:first-child,
+  th:first-child {
+    border-left: none;
+  }
+
+  .yt-video {
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 </style>
 
 <div class="main-content">
   <div class="background">
-    <h1 class="heading">Tired of 50 hour render times for nature scenes?</h1>
 
+    <div class="embed-responsive embed-responsive-16by9">
+      <div class="yt-video">
+        <iframe
+        style="width: 100%"
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/99Pb-qb_Pxs"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <h1 class="heading">Tired of 50 hour render times for nature scenes?</h1>
+    
     <!-- Feature Cards -->
     <div class="cards">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="card-media">
-          <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/PeskyGoldenCavy-mobile.mp4">
-          </div>
-        <div class="card-text right">
-          <p class="card-heading">3D tree models are slow</p>
-          <p class="card-body">
-            Traditional tree models often have millions of polygons, and
-            multiple complex materials, making them very slow to render.
-          They also slow down the viewport and add to visual noise while working.
-          </p>
-        </div>
-      </div>
-      
-      <!-- Card 2 -->
-      
-      <div class="card">
-        <div class="card-text left">
-          <p class="card-heading">They also use a lot of memory</p>
-          <p class="card-body">
-            Another problem with having all of those polygons and textures
-            is that they can add up and overload the memory limits of your GPU,
-            resulting in having to render on the CPU, often 5 to 10x slower.
-          </p>
-        </div>
-        <div class="card-media">
-            <img class="media" src="https://i.ibb.co/6rc4PZS/CUDA-error.jpg">
-        </div>
-      </div>
+    <!-- Card 1 -->
+    <div class="card">
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/PeskyGoldenCavy-mobile.mp4">
+    </div>
+    <div class="card-text right">
+    <p class="card-heading">3D tree models are slow</p>
+    <p class="card-body">
+    Traditional tree models often have millions of polygons, and
+    multiple complex materials, making them very slow to render.
+    They also slow down the viewport and add to visual noise while working.
+    </p>
+    </div>
+    </div>
+    
+    <!-- Card 2 -->
+    
+    <div class="card">
+    <div class="card-text left">
+    <p class="card-heading">They also use a lot of memory</p>
+    <p class="card-body">
+    Another problem with having all of those polygons and textures
+    is that they can add up and overload the memory limits of your GPU,
+    resulting in having to render on the CPU, which is often 5 to 10x slower.
+    </p>
+    </div>
+    <div class="card-media">
+    <img class="media" src="https://i.ibb.co/6rc4PZS/CUDA-error.jpg">
+    </div>
+    </div>
+    </div>
+    
+    <!-- HEADING -->
+    <div class="heading" style="font-size: 40px">
+    Use Alpha Trees to render 10x the no. of trees 10x as fast
+    </div>
+    
+    <!-- Feature Cards -->
+    <div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/AcidicImpressiveBinturong-mobile.mp4">
+    </div>
+    <div class="card-text right">
+    <p class="card-heading">Billboards are much faster</p>
+    <p class="card-body">
+    Alpha Trees uses flat tree cards to speed up rendering and lower memory usage.
+    Each tree card only has 4 vertices, drastically increasing performance when
+    compared to the millions usually found in 3D tree models.
+    </p>
+    </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card">
+    <div class="card-text left">
+    <p class="card-heading">Just as realistic as 3D trees</p>
+    <p class="card-body">
+    The tree cards use an advanced material that allows them to react to lighting
+    and translucency.
+    </p>
+    <p class="card-body">
+    This means that they can still look 3D, without needing the extra geometry.
+    </p>
+    </div>
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/SomeInfiniteBurro-mobile.mp4">
+    </div>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="card">
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/EarnestCalmAzurewingedmagpie-mobile.mp4">
+    </div>
+    <div class="card-text right">
+    <p class="card-heading">Always best side forward</p>
+    <p class="card-body">
+    Since the trees are 2D, you might think that when the camera views them from the side that they would disappear. 
+    However, they automatically face towards the active camera, giving the convincing illusion that they are 3D
+    </p>
+    </div>
+    </div>
+    </div>
+    
+    <!-- HEADING -->
+    <div class="heading" style="font-size: 40px">
+    Scatter and render millions of trees with just a few clicks
+    </div>
+    
+    <div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+    <div class="card-text left">
+    <p class="card-heading">Complete control</p>
+    <p class="card-body">
+    The addon has a powerful scattering system built on geometry nodes that lets you cover a
+    terrain in trees with ease. You get full control over density, scale, rotation, randomness,
+    and even wind animation
+    </p>
+    </div>
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/ScaryTimelyEastrussiancoursinghounds-mobile.mp4">
+    </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card">
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/LiquidBoilingAfricanfisheagle-mobile.mp4">
+    </div>
+    <div class="card-text right">
+    <p class="card-heading">With procedural distibution</p>
+    <p class="card-body">
+    You can control the density and scale of trees procedurally using the powerful
+    <a href="https://https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-text">weight layers</a>
+    
+    system, which lets you affect a weight map based on factors such as slope, height, or distance from the camera.
+    </p>
+    </div>
+    </div>
     </div>
 
     <!-- HEADING -->
     <div class="heading" style="font-size: 40px">
-      Use Alpha Trees to render 10x the no. of trees 10x as fast
+    Change any aspect of the tree's appearance easily
+    </div>
+    
+    <div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+    <div class="card-text left">
+    <p class="card-heading">Complete control</p>
+    <p class="card-body">
+    The addon has a powerful scattering system built on geometry nodes that lets you cover a
+    terrain in trees with ease. You get full control over density, scale, rotation, randomness,
+    and even wind animation
+    </p>
+    </div>
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/ScaryTimelyEastrussiancoursinghounds-mobile.mp4">
+    </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card">
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/LiquidBoilingAfricanfisheagle-mobile.mp4">
+    </div>
+    <div class="card-text right">
+    <p class="card-heading">With procedural distibution</p>
+    <p class="card-body">
+    You can control the density and scale of trees procedurally using the powerful
+    <a href="https://https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-body">weight layers</a>
+    
+    system, which lets you affect a weight map based on factors such as slope, height, or distance from the camera.
+    </p>
+    </div>
+    </div>
     </div>
 
-    <!-- Feature Cards -->
+    <!-- HEADING -->
+    <div class="heading" style="font-size: 40px">
+    Optimised to the core
+    </div>
+    
+    <div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+    <div class="card-text left">
+    <p class="card-heading">Minimum memory, maximum</p>
+    <p class="card-heading">speed</p>
+    <p class="card-body">
+    Trees that are outside the camera's field of view are automatically culled to reduce memory and render times.
+    If they still use too much memory, you can choose the quality from high (2k) to low (256p),
+    reducing memory usage by a further 64x.
+    </p>
+    </div>
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/ClutteredGrouchyKakapo-mobile.mp4">
+    </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card">
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/BrownColorfulJaguarundi-mobile.mp4">
+    </div>
+    <div class="card-text right">
+    <p class="card-heading">Made for any hardware</p>
+    <p class="card-body">
+    All promotional images for Alpha Trees were rendered on a 
+    <a href="https://support.hp.com/us-en/product/hp-pavilion-power-15-cb000-laptop-pc/15551388/document/c05573494" class="card-body">4-year-old laptop GPU</a>
+    with the minimum recommended VRAM for cycles (2GB). Rendering these images on the same hardware using 3D tree models
+    would simply not be possible.
+    </p>
+    </div>
+    </div>
+    </div>
+    
+    <!-- HEADING -->
+    <div class="heading" style="font-size: 40px">
+    But wait, there's more!
+    </div>
+    
     <div class="cards">
       <!-- Card 1 -->
-      <div class="card">
-        <div class="card-media">
-          <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/PeskyGoldenCavy-mobile.mp4">
-          </div>
-        <div class="card-text right">
-          <p class="card-heading">Billboards are a lot faster</p>
-          <p class="card-body">
-            Alpha Trees uses flat tree cards to speed up rendering and lower memory usage.
-            Each tree card only has 4 vertices
-          </p>
-        </div>
+    <div class="card">
+      <div class="card-text left">
+        <p class="card-heading">Versatile material</p>
+    <p class="card-body">
+      Each tree can be customised using the material, allowing you to change everything
+      from color, randomness and translucency all the way to number of dead leaves,
+      the color of the trunk and the amount of snow lying on it.
+    </p>
+    </div>
+    <div class="card-media">
+      <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/HelplessHeartfeltEmeraldtreeskink-mobile.mp4">
       </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-media">
+        <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/EmbellishedWeakGuillemot-mobile.mp4">
+        </div>
+    <div class="card-text right">
+      <p class="card-heading">~150 builtin trees</p>
+    <p class="card-body">
+    The Addon comes with a rich library of premade trees, including ~70 deciduous trees, ~50 coniferous trees,
+    and ~20 small trees and shrubs. You can also easily search through the library by name, species, size,
+    or tags to find exactly what you want quickly.
+  </p>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+  <div class="card-text left">
+    <p class="card-heading">Easily create your own</p>
+    <p class="card-body">
+      You can convert almost any 3D tree to an Alpha Tree in just a few steps! The addon will automatically
+      render out color, normal, shadow and mask passes, and then combines them into an Alpha Tree
+      that you can use like any other!
+    </p>
+    </div>
+    <div class="card-media">
+    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/HilariousAccurateHare-mobile.mp4">
+    </div>
+    </div>
+    </div>
+    
+    <div class="heading" style="font-size: 40px">
+      Lite vs Pro:
+    </div>
+    
+    <table>
+      <th><br /></th>
+      <th>Lite</th>
+      <th>Pro</th>
+      <tr>
+        <td class="rightheading">No. of trees:</td>
+        <td><p style="color: #ffe0e0">50</p></td>
+        <td><p style="color: #d0facc">150</p></td>
+      </tr>
+      <tr>
+        <td class="rightheading">Can import individual trees:</td>
+        <td>✔️</td>
+        <td>✔️</td>
+      </tr>
+      <tr>
+        <td class="rightheading">Can generate new trees:</td>
+        <td>✔️</td>
+        <td>✔️</td>
+      </tr>
+      <tr>
+        <td class="rightheading">Can scatter trees automatically:</td>
+        <td>❌</td>
+        <td>✔️</td>
+      </tr>
+      <tr>
+        <td class="rightheading">Has camera culling:</td>
+        <td>❌</td>
+        <td>✔️</td>
+      </tr>
+      <tr>
+        <td class="rightheading">Price:</td>
+        <td>$25</td>
+        <td>$45</td>
+      </tr>
+    </table>
+    <br>
+    <br>
+
+    </div>
   </div>
 </div>
