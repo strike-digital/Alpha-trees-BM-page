@@ -1,6 +1,6 @@
 <style>
   .background {
-    background-color: #333333;
+    background-color: #252525;
     background-position: top;
     padding-top: 36px;
     padding-bottom: 0px;
@@ -8,6 +8,7 @@
 
   .heading {
     color: #ffffff;
+    background-color: #444444;
     font-size: 48px;
     line-height: 52px;
     font-weight: bold;
@@ -15,13 +16,20 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 12px;
-    text-shadow: 7px 7px 15px rgb(32, 32, 32);
+    padding-bottom: 20px;
+    /* text-shadow: 7px 7px 15px rgb(32, 32, 32); */
+  }
+
+  .heading.sub {
+    padding: 0px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    line-height: 0px;
+    color: #aaaaaa;
+    font-size: 16px;
   }
 
   .cards {
-    background-color: #252525;
     background-position: top;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -33,9 +41,7 @@
     width: 100%;
     padding-top: 36px;
     padding-bottom: 36px;
-    /* display: flex; */
     display:flex;
-    background-color: #252525;
   }
 
   .card-media {
@@ -59,7 +65,7 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 1em;
-    line-height: 0px;
+    line-height: 0.25em;
     margin-top: 0.5rem;
     margin-bottom: 0.75rem;
   }
@@ -72,7 +78,18 @@
     border-radius: 5px;
     width: 100%;
     height: auto;
-    box-shadow: 10px 10px 20px #000000;
+    /* box-shadow: 10px 10px 20px #000000; */
+  }
+  
+  .media-big {
+    /* padding-bottom: 20px; */
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90%;
+    height: auto;
+    border-radius: 7px;
+    /* box-shadow: 10px 10px 20px #000000; */
   }
 
   p {
@@ -87,16 +104,16 @@
   /* border: 1px solid; */
   /* } */
 
-  table {
+  .at-table {
     border-collapse: separate;
-    background-color: rgb(36, 36, 36);
-    box-shadow: 10px 10px 20px rgb(26, 26, 26);
+    background-color: rgb(30, 30, 30);
+    /* box-shadow: 10px 10px 20px rgb(26, 26, 26); */
     border: solid white 1px;
     border-radius: 10px;
     color: #ffffff;
     margin: auto;
-    margin-top: 36px;
-    margin-bottom: 36px;
+    /* margin-top: 36px; */
+    /* margin-bottom: 36px; */
   }
 
   td,
@@ -129,6 +146,50 @@
     width:90%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px
+  }
+
+  .end-links {
+    padding: 20px;
+    display: flex;
+    
+  }
+  
+  .end-link-box {
+    padding: 15px;
+    padding-top: 20px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 15px;
+    background-color: rgb(20, 20, 20);
+    margin: 10px;
+  }
+
+  .end-link-img {
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .update-section {
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color:rgb(20, 20, 20);
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  .at-ul {
+    /* width: 100%; */
+    color: white;
+    padding-bottom:30px;
+  }
+
+  .at-li {
+    width: 100%;
   }
 
 </style>
@@ -136,22 +197,20 @@
 <div class="main-content">
   <div class="background">
 
-    <div class="embed-responsive embed-responsive-16by9">
-      <div class="yt-video">
-        <iframe
-        style="width: 100%"
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/99Pb-qb_Pxs"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      </div>
+    <div class="yt-video">
+      <iframe
+      style="width: 100%"
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/99Pb-qb_Pxs"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
     </div>
 
-    <h1 class="heading">Tired of 50 hour render times for nature scenes?</h1>
-    
+    <div class="heading">Tired of 50 hour render times for nature scenes?</div>
+      
     <!-- Feature Cards -->
     <div class="cards">
     <!-- Card 1 -->
@@ -238,11 +297,15 @@
     </p>
     </div>
     </div>
-    </div>
+  </div>
+
+    
+    <video class="media-big" controls muted src="https://thumbs.gfycat.com/CheeryFelineAltiplanochinchillamouse-mobile.mp4"></video>
     
     <!-- HEADING -->
     <div class="heading" style="font-size: 40px">
     Scatter and render millions of trees with just a few clicks
+      <div class="heading sub">*only available in pro version</div>
     </div>
     
     <div class="cards">
@@ -270,45 +333,7 @@
     <p class="card-heading">With procedural distibution</p>
     <p class="card-body">
     You can control the density and scale of trees procedurally using the powerful
-    <a href="https://https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-text">weight layers</a>
-    
-    system, which lets you affect a weight map based on factors such as slope, height, or distance from the camera.
-    </p>
-    </div>
-    </div>
-    </div>
-
-    <!-- HEADING -->
-    <div class="heading" style="font-size: 40px">
-    Change any aspect of the tree's appearance easily
-    </div>
-    
-    <div class="cards">
-    <!-- Card 1 -->
-    <div class="card">
-    <div class="card-text left">
-    <p class="card-heading">Complete control</p>
-    <p class="card-body">
-    The addon has a powerful scattering system built on geometry nodes that lets you cover a
-    terrain in trees with ease. You get full control over density, scale, rotation, randomness,
-    and even wind animation
-    </p>
-    </div>
-    <div class="card-media">
-    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/ScaryTimelyEastrussiancoursinghounds-mobile.mp4">
-    </div>
-    </div>
-    
-    <!-- Card 2 -->
-    <div class="card">
-    <div class="card-media">
-    <video class="media" autoplay controls loop muted src="https://thumbs.gfycat.com/LiquidBoilingAfricanfisheagle-mobile.mp4">
-    </div>
-    <div class="card-text right">
-    <p class="card-heading">With procedural distibution</p>
-    <p class="card-body">
-    You can control the density and scale of trees procedurally using the powerful
-    <a href="https://https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-body">weight layers</a>
+    <a target="_blank" target="_blank" href="https://https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-text">weight layers</a>
     
     system, which lets you affect a weight map based on factors such as slope, height, or distance from the camera.
     </p>
@@ -347,7 +372,7 @@
     <p class="card-heading">Made for any hardware</p>
     <p class="card-body">
     All promotional images for Alpha Trees were rendered on a 
-    <a href="https://support.hp.com/us-en/product/hp-pavilion-power-15-cb000-laptop-pc/15551388/document/c05573494" class="card-body">4-year-old laptop GPU</a>
+    <a target="_blank" href="https://support.hp.com/us-en/product/hp-pavilion-power-15-cb000-laptop-pc/15551388/document/c05573494" class="card-body">4-year-old laptop GPU</a>
     with the minimum recommended VRAM for cycles (2GB). Rendering these images on the same hardware using 3D tree models
     would simply not be possible.
     </p>
@@ -411,7 +436,8 @@
       Lite vs Pro:
     </div>
     
-    <table>
+    <br>
+    <table class="at-table">
       <th><br /></th>
       <th>Lite</th>
       <th>Pro</th>
@@ -447,8 +473,74 @@
       </tr>
     </table>
     <br>
-    <br>
 
+    <div class="heading" style="font-size: 40px">
+      Updates:
     </div>
+    
+    <div class="update-section">
+      <p class="card-heading" style="text-align: center">v2.0 - 15/01/22</p>
+      <ul class="at-ul">
+        <li class="at-li">Moved entire system to geometry nodes for Blender 3.0.</li>
+        <li class="at-li">Added 133 new trees, increasing the total amount from 15 to 148!</li>
+        <li class="at-li">Added a powerful system for controlling distribution using layers.</li>
+        <li class="at-li">Icons now load instantly instead of taking up to 40s for the full library.</li>
+        <li class="at-li">Icons are now also higher resolution.</li>
+        <li class="at-li">Camera clipping and targeting is now fully automatic.</li>
+        <li class="at-li">Added tree search to make it easier to use large libraries.</li>
+        <li class="at-li">Completely rewrote the documentation.</li>
+        <li class="at-li">Restructured the entire addon to be easier to develop, making updates faster.</li>
+        <li class="at-li">Added ability to fade out trees when they get too close to the camera.</li>
+        <li class="at-li"><a target="_blank" href="https://blenderartists.org/t/alpha-trees-2-0-coming-soon/1250694">Release post</a> for details.</li>
+      </ul>
+      
+      <p class="card-heading" style="text-align: center">v1.3 - 28/03/21</p>
+      <ul class="at-ul">
+        <li class="at-li">Added LODs, which let you optimize your scene even more, by using lower quality trees further away from the camera</li>
+        <li class="at-li">Instead of freezing the screen when generating a tree, the addon now provides useful feedback about what stage of the process is being computed.</li>
+        <li class="at-li">You can now track trees to the scene camera, which is useful with addons like RenderSet, which change the scene camera each frame</li>
+        <li class="at-li">Fixed a few bugs.</li>
+        <li class="at-li">Laid the groundwork for changing to Geometry nodes</li>
+        <li class="at-li">Check out the <a target="_blank" href="https://blenderartists.org/t/alpha-trees-render-massive-forests-fast/1250694/111?u=strike_digital">release post</a> for details and a demonstration.</li>
+      </ul>
+      <p class="card-heading" style="text-align: center">v1.2 - 03/02/21</p>
+      <ul class="at-ul">
+        <li class="at-li">Added curve controls for weight maps, meaning that you can edit the distribution of trees in realtime!</li>
+        <li class="at-li">Added camera clipping mask, which lets you even further optimize scenes by removing trees that are outside of the camera view.</li>
+        <li class="at-li">Redesigned the UI for weight layers, making it much more intuitive and easy to use.</li>
+        <li class="at-li">You can now copy whole trees between biomes.</li>
+        <li class="at-li">Added multi-import to particles.</li>
+        <li class="at-li">Fixed a few bugs.</li>
+        <li class="at-li">And even more! Check out the <a target="_blank" href="https://blenderartists.org/t/alpha-trees-render-massive-forests-fast/1250694/111?u=strike_digital">release post</a> for a full list.</li>
+      </ul>
+      <p class="card-heading" style="text-align: center">v1.1 - 19/01/21</p>
+      <ul class="at-ul">
+        <li class="at-li">New controls for height offset and width for particles. Makes it very easy to make bushes for example.</li>
+        <li class="at-li">You can now select materials for single trees, allowing them to share materials.</li>
+        <li class="at-li">Added camera tracking for single trees.</li>
+        <li class="at-li">Improved material setting copying. You can now modify the tree materials without worrying about messing up the addon.</li>
+        <li class="at-li">Improved tree icons to accurately reflect material settings. Improves readability drastically.</li>
+        <li class="at-li">Plus way more! Check out the <a target="_blank" href="https://blenderartists.org/t/alpha-trees-render-massive-forests-fast/1250694/92">release post</a> for a full list.</li>
+      </ul>
+      <p class="card-heading" style="text-align: center">v1.0 - Initial release - 04/01/21</p>
+    </div>
+
+   <div class="heading" style="font-size: 40px">
+      Find out more:
+    </div>
+
+    <div class="end-links">
+      <a class="end-link-box" target="_blank" href="https://blenderartists.org/t/alpha-trees-render-massive-forests-fast">
+          <img class="end-link-img" src="https://i.ibb.co/dLMHhRk/Blender-artists-logo.png">
+      </a>
+      <a class="end-link-box" target="_blank" href="https://discord.gg/5cVzT4pVrM">
+        <img class="end-link-img" src="https://i.ibb.co/qMZ3Z7h/discord-logo-outline.png">
+      </a>
+      <a class="end-link-box" target="_blank" href="https://www.youtube.com/playlist?list=PL3PBFZHLoSZ5bELqbjIk-iufdDeLsa5Sx">
+        <img class="end-link-img" src="https://i.ibb.co/wYtPGsW/youtube-logo.png">
+      </a>
+    </div> 
+
   </div>
+</div>
 </div>
