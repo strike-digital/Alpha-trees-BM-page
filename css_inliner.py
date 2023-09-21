@@ -4,7 +4,7 @@ from pathlib import Path
 import pyperclip
 
 cwd = os.getcwd()
-path = Path(cwd) / "Alpha-trees-BM-page/src/pages/_at_page1.html"
+path = Path(__file__).parent / "src/pages/_at_page1.html"
 
 
 with open(str(path), "r", encoding="utf8") as file:
@@ -20,6 +20,6 @@ for i in ["card", "card-body"]:
     inlined = inlined.replace(f"class=\"{i}\"", "")
 with open(str(path), "w", encoding="utf8") as file:
     file.write(inlined)
-
+    
 pyperclip.copy(inlined)
 print("Done!")

@@ -22,6 +22,19 @@
     /* text-shadow: 7px 7px 15px rgb(32, 32, 32); */
   }
 
+  .heading-no-color {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    /* text-shadow: 7px 7px 15px rgb(32, 32, 32); */
+  }
+
   .footer {
     color: #aaaaaa;
     background-color: #444444;
@@ -193,11 +206,28 @@
   .at-li {
     width: 100%;
   }
+
+  .top-update-text {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+  }
 </style>
 
 <div class="main-content">
   <div class="background">
+    <!-- Feature Cards -->
+    <div class="update-section">
+      <div class="heading-no-color" style="border-radius: 5px">Alpha Trees 2.2 out now!</div>
+        <!-- <p class="card-heading" style="text-align: center">This update brings Scatter5 integration, updates to the weight layers engine, and a full rewrite of the preset system</p> -->
+      <p class="card-heading" style="margin-bottom: 0px; line-height: 1.25em; text-align: center">This update brings Scatter5 integration, updates to the weight layers engine, and a full rewrite of the preset system!</p>
+      <br>
+      <video class="media-big" controls muted src="https://thumbs.gfycat.com/ElementaryApprehensiveJuliabutterfly-mobile.mp4"></video>
+      <video class="media-big" controls muted src="https://giant.gfycat.com/MarriedAgedEagle.webm"></video>
+      <p class="card-heading" style="margin-bottom: 0px; line-height: 1.25em; text-align: center">See the release post for a full list of changes: <a target="_blank" href="https://blenderartists.org/t/weight-layers-addon-free/1321904"
+        class="card-heading" style="margin-bottom: 0px; line-height: 1.25em; text-align: center">here</a></p>
 
+    </div>
     <div class="yt-video">
       <iframe style="width: 100%" width="560" height="315" src="https://www.youtube-nocookie.com/embed/99Pb-qb_Pxs"
         title="YouTube video player" frameborder="0"
@@ -335,8 +365,8 @@
           <p class="card-heading">With procedural distribution</p>
           <p class="card-body">
             You can control the density and scale of trees procedurally using the powerful
-            <a target="_blank" target="_blank"
-              href="https://https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-text">weight
+            <a target="_blank"
+              href="https://blenderartists.org/t/weight-layers-addon-free/1321904" class="card-text">weight
               layers</a>
 
             system, which lets you affect a weight map based on factors such as slope, height, or distance from the
@@ -541,6 +571,25 @@
     </div>
 
     <div class="update-section">
+      <p class="card-heading" style="text-align: center">v2.2 - 02/07/22</p>
+      <ul class="at-ul">
+        <li class="at-li">Added full scatter integration</li>
+        <li class="at-li">Added 5 new weight layers: Normalize, Is inside mesh, Clamp, Camera cull and Blur, allowing for even more fine control over the scale and distribution of the trees.</li>
+        <li class="at-li">Updated the weight layers UI for Alpha Trees to be much more intuitive to use.</li>
+        <li class="at-li">Updated the preset system to be more powerful and easy to use  with the new system</li>
+        <li class="at-li">Added three high quality preset biomes: Mediterranean pine scrub, European broadleaf forest and Spruce woodland, which can be added to your scene with just a few clicks</li>
+        <li class="at-li">Added a new method for editing and viewing biome presets</li>
+        <li class="at-li">Fixed <i>many</i> bugs including but not limited to:</li>
+        <ul >
+          <li class="at-li">Camera tracking for single trees will now work instead of causing an error</li>
+          <li class="at-li">reloading previews will now actually reload the tree previews</li>
+          <li class="at-li">If a tree in the scene isn't found in the current library, a more helpful error is shown</li>
+          <li class="at-li">Fixed moving the order of adjustments in weight layers messing up</li>
+        </ul>
+        <li class="at-li">Updated the documentation to cover all new subjects, and also better cover the existing ones.</li>
+        <li class="at-li"><a target="_blank"
+            href="https://blenderartists.org/t/alpha-trees-render-massive-forests-fast/1250694/268?u=strike_digital">Release post</a> for details.</li>
+      </ul>
       <p class="card-heading" style="text-align: center">v2.0 - 15/01/22</p>
       <ul class="at-ul">
         <li class="at-li">Moved entire system to geometry nodes for Blender 3.0.</li>
